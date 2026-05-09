@@ -1,0 +1,70 @@
+/* ── Note cards ──────────────────────────────────────────────────────────── */
+.note-card {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+  background: white;
+  height: 100%;
+}
+
+.note-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.note-card .card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-card .card-text {
+  color: #6c757d;
+  font-size: 0.875rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.note-card .card-footer {
+  background: transparent;
+  border-top: 1px solid #f0f2f5;
+  font-size: 0.75rem;
+  color: #adb5bd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-card .btn-action {
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.note-card:hover .btn-action {
+  opacity: 1;
+}
+
+/* Category colour strip */
+.note-card .category-strip {
+  height: 4px;
+  border-radius: 12px 12px 0 0;
+}
+
+.strip-general  { background: #6366f1; }
+.strip-work     { background: #10b981; }
+.strip-personal { background: #f59e0b; }
+.strip-ideas    { background: #ec4899; }
+
+/* ── Category badges ─────────────────────────────────────────────────────── */
+.badge-general  { background-color: #ede9fe; color: #6366f1; }
+.badge-work     { background-color: #d1fae5; color: #059669; }
+.badge-personal { background-color: #fef3c7; color: #d97706; }
+.badge-ideas    { background-color: #fce7f3; color: #db2777; }

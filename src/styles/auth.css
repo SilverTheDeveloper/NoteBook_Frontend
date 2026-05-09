@@ -1,0 +1,59 @@
+/* ── Auth page ───────────────────────────────────────────────────────────── */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.auth-card .card-header {
+  background: white;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 16px 16px 0 0 !important;
+  padding: 0;
+}
+
+.auth-card .nav-tabs {
+  border-bottom: none;
+}
+
+.auth-card .nav-tabs .nav-link {
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 14px 20px;
+  font-weight: 600;
+  color: #6c757d;
+  border-radius: 0;
+}
+
+.auth-card .nav-tabs .nav-link.active {
+  color: #6366f1;
+  border-bottom-color: #6366f1;
+  background: transparent;
+}
+
+.auth-logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.auth-logo small {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.8;
+  letter-spacing: 0;
+}

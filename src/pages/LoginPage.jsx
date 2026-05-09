@@ -227,9 +227,7 @@ export default function LoginPage({ onLogin }) {
           </div>
         </div>
 
-        <p className="text-center mt-3" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.78rem' }}>
-          Connected to Spring Boot API on localhost:8080
-        </p>
+       
       </div>
     </div>
   )

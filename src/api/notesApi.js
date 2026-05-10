@@ -47,30 +47,30 @@ function authHeaders() {
  * Returns { token, id, name, email }  — password is NOT in the response
  */
 export const registerUser = (name, email, password) =>
-  api.post('/users/register', { name, email, password }).then(res => res.data)
+  api.post('/api/users/register', { name, email, password }).then(res => res.data)
 
 /**
  * POST /api/users/login
  * Returns { token, id, name, email }
  */
 export const loginUser = (email, password) =>
-  api.post('/users/login', { email, password }).then(res => res.data)
+  api.post('/api/users/login', { email, password }).then(res => res.data)
 
 // ── User endpoints (protected) ────────────────────────────
 
 export const getUserById = (id) =>
-  api.get(`/users/${id}`, { headers: authHeaders() }).then(res => res.data)
+  api.get(`/api/users/${id}`, { headers: authHeaders() }).then(res => res.data)
 
 // ── Note endpoints (all protected) ───────────────────────
 
 export const getNotes = (userId) =>
-  api.get(`/notes/user/${userId}`, { headers: authHeaders() }).then(res => res.data)
+  api.get(`/api/notes/user/${userId}`, { headers: authHeaders() }).then(res => res.data)
 
 export const createNote = (userId, note) =>
-  api.post(`/notes/user/${userId}`, note, { headers: authHeaders() }).then(res => res.data)
+  api.post(`/api/notes/user/${userId}`, note, { headers: authHeaders() }).then(res => res.data)
 
 export const updateNote = (id, note) =>
-  api.put(`/notes/${id}`, note, { headers: authHeaders() }).then(res => res.data)
+  api.put(`/api/notes/${id}`, note, { headers: authHeaders() }).then(res => res.data)
 
 export const deleteNote = (id) =>
-  api.delete(`/notes/${id}`, { headers: authHeaders() })
+  api.delete(`/api/notes/${id}`, { headers: authHeaders() })
